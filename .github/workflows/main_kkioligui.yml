@@ -35,5 +35,5 @@ jobs:
         app-name: kkioligui
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2DCE587445844839AFBA2E687E79FBB0 }}
-        package: './dist/kkioligui'
+        package: './kkioligui/dist/kkioligui'
 
