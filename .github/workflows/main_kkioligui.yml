@@ -26,7 +26,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --if-present
+        npm run build --prod
         npm run test --if-present
 
     - name: Run Azure webapp deploy action using publish profile credentials
@@ -35,5 +35,5 @@ jobs:
         app-name: kkioligui
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2DCE587445844839AFBA2E687E79FBB0 }}
-        package: .
+        package: './dist/kkioligui'
 
